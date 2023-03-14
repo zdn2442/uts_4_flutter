@@ -205,14 +205,17 @@ class RegisterView extends GetView<RegisterController> {
                             ),
                           ),
                           SizedBox(width: 20,),
-                          Container(
-                            decoration: BoxDecoration(
-                               border: Border.all(width: 1, color: Color(0xff00D7FF)),
-                              borderRadius: BorderRadius.circular(100)
+                          InkWell(
+                            onTap: () => Get.toNamed(Routes.PHONE_LOGIN),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                 border: Border.all(width: 1, color: Color(0xff00D7FF)),
+                                borderRadius: BorderRadius.circular(100)
+                              ),
+                              width: lebar * 0.11,
+                              height: tinggi * 0.05,
+                              child: Icon(Icons.call),
                             ),
-                            width: lebar * 0.11,
-                            height: tinggi * 0.05,
-                            child: Icon(Icons.call),
                           )
                         ],
                       ),
