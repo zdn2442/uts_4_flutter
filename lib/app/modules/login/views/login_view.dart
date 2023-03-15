@@ -133,7 +133,7 @@ class LoginView extends GetView<LoginController> {
                       margin: EdgeInsets.only(top: 5),
                       child: TextButton(
                           // onPressed: () => Get.toNamed(Routes.FORGOT_PASS),
-                          onPressed: () => print("pressed"),
+                          onPressed: () => Get.toNamed(Routes.FOR_PASS),
                           child: Text(
                             "Forgot Password",
                             style: TextStyle(

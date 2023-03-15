@@ -1,17 +1,25 @@
 import 'package:get/get.dart';
 
-import 'package:uts_4_flutter/app/modules/home/bindings/home_binding.dart';
-import 'package:uts_4_flutter/app/modules/home/views/home_view.dart';
-import 'package:uts_4_flutter/app/modules/login/bindings/login_binding.dart';
-import 'package:uts_4_flutter/app/modules/login/views/login_view.dart';
-import 'package:uts_4_flutter/app/modules/otp/bindings/otp_binding.dart';
-import 'package:uts_4_flutter/app/modules/otp/views/otp_view.dart';
-import 'package:uts_4_flutter/app/modules/phone_login/bindings/phone_login_binding.dart';
-import 'package:uts_4_flutter/app/modules/phone_login/views/phone_login_view.dart';
-import 'package:uts_4_flutter/app/modules/register/bindings/register_binding.dart';
-import 'package:uts_4_flutter/app/modules/register/views/register_view.dart';
-import 'package:uts_4_flutter/app/modules/splash/bindings/splash_binding.dart';
-import 'package:uts_4_flutter/app/modules/splash/views/splash_view.dart';
+import '../modules/add_siswa/bindings/add_siswa_binding.dart';
+import '../modules/add_siswa/views/add_siswa_view.dart';
+import '../modules/edit_siswa/bindings/edit_siswa_binding.dart';
+import '../modules/edit_siswa/views/edit_siswa_view.dart';
+import '../modules/for_pass/bindings/for_pass_binding.dart';
+import '../modules/for_pass/views/for_pass_view.dart';
+import '../modules/home/bindings/home_binding.dart';
+import '../modules/home/views/home_view.dart';
+import '../modules/login/bindings/login_binding.dart';
+import '../modules/login/views/login_view.dart';
+import '../modules/otp/bindings/otp_binding.dart';
+import '../modules/otp/views/otp_view.dart';
+import '../modules/phone_login/bindings/phone_login_binding.dart';
+import '../modules/phone_login/views/phone_login_view.dart';
+import '../modules/register/bindings/register_binding.dart';
+import '../modules/register/views/register_view.dart';
+import '../modules/splash/bindings/splash_binding.dart';
+import '../modules/splash/views/splash_view.dart';
+import '../modules/verify/bindings/verify_binding.dart';
+import '../modules/verify/views/verify_view.dart';
 
 part 'app_routes.dart';
 
@@ -50,6 +58,26 @@ class AppPages {
       name: _Paths.OTP,
       page: () => OtpView(),
       binding: OtpBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT_SISWA,
+      page: () => EditSiswaView(),
+      binding: EditSiswaBinding(),
+    ),
+    GetPage(
+      name: _Paths.ADD_SISWA,
+      page: () => AddSiswaView(),
+      binding: AddSiswaBinding(),
+    ),
+    GetPage(
+      name: _Paths.VERIFY,
+      page: () => VerifyView(),
+      binding: VerifyBinding(),
+    ),
+    GetPage(
+      name: _Paths.FOR_PASS,
+      page: () => ForPassView(),
+      binding: ForPassBinding(),
     ),
   ];
 }

@@ -68,6 +68,18 @@ class AuthController extends GetxController {
     }
   }
 
+  resetPassword(String email) async {
+    try {
+      final credential = await auth.sendPasswordResetEmail(email: email);
+      Get.offAllNamed(Routes.VERIFY);
+    } on FirebaseAuthException catch (e) {
+      Get.defaultDialog(
+        title: "Error!",
+        middleText: 'Email not exist',
+      );
+    }
+  }
+
   Future<UserCredential> signInWithGoogle() async {
     // Trigger the authentication flow
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
